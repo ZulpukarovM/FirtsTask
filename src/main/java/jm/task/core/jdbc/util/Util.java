@@ -5,14 +5,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Util {
-    private Util() {
-    }
 
     static final String URL = "jdbc:mysql://localhost:3306/newdb";
     static final String USERNAME = "root";
     static final String PASSWORD = "root";
     static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static Connection connection;
+
+    private Util() {
+    }
 
     public static Connection getConnection() {
         if (connection == null) {
